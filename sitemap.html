@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Site Map - Koenigsegg Jesko</title>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body class="level-3">
+  <img class="image-gradient" src="images/gradient.png" alt="gradient"/>
+  <div class="layer-blur"></div>
+
+  <div class="container">
+    <header>
+      <a href="index.html"><h1 class="logo">Koenigsegg Jesko</h1></a>
+      <nav>
+        <a href="performance.html">Performance</a>
+        <a href="heritage.html">Heritage</a>
+        <a href="support.html">Support</a>
+      </nav>
+      <a href="learnmore.html" class="btn-learnmore">LEARN MORE</a>
+    </header>
+
+    <main class="specs-main">
+      <section class="specs-title">
+        <h1>SITE</h1>
+        <h3>MAP</h3>
+        <p class="specs-intro">Navigate through all pages of the Koenigsegg Jesko website</p>
+      </section>
+
+      <section class="sitemap-section">
+        <div class="sitemap-grid">
+          <div class="sitemap-category">
+            <h3>Main Pages</h3>
+            <ul class="sitemap-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="performance.html">Performance</a></li>
+              <li><a href="heritage.html">Heritage</a></li>
+              <li><a href="support.html">Support</a></li>
+            </ul>
+          </div>
+
+          <div class="sitemap-category">
+            <h3>Technical</h3>
+            <ul class="sitemap-links">
+              <li><a href="specs.html">Specifications</a></li>
+              <li><a href="Engine.html">Engine</a></li>
+              <li><a href="History.html">History</a></li>
+            </ul>
+          </div>
+
+          <div class="sitemap-category">
+            <h3>Information</h3>
+            <ul class="sitemap-links">
+              <li><a href="learnmore.html">Learn More</a></li>
+              <li><a href="FAQ.html">FAQ</a></li>
+              <li><a href="video.html">Video</a></li>
+              <li><a href="Jesko.html">Jesko Details</a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <style>
+    .sitemap-section {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .sitemap-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 3rem;
+      margin-top: 3rem;
+    }
+
+    .sitemap-category {
+      background: rgba(79, 70, 229, 0.05);
+      border: 1px solid rgba(79, 70, 229, 0.2);
+      border-radius: 20px;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .sitemap-category h3 {
+      font-size: 1.5rem;
+      color: #4f46e5;
+      margin-bottom: 1.5rem;
+      font-weight: 600;
+    }
+
+    .sitemap-links {
+      list-style: none;
+      padding: 0;
+    }
+
+    .sitemap-links li {
+      margin-bottom: 1rem;
+    }
+
+    .sitemap-links a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.1rem;
+      padding: 0.5rem 1rem;
+      border-radius: 10px;
+      transition: all 0.3s ease;
+      display: block;
+    }
+
+    .sitemap-links a:hover {
+      background: rgba(79, 70, 229, 0.2);
+      color: #6366f1;
+      transform: translateY(-2px);
+    }
+
+    @media (max-width: 768px) {
+      .sitemap-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+      
+      .sitemap-category {
+        padding: 1.5rem;
+      }
+    }
+  </style>
+</body>
+</html>

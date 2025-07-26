@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jesko - FAQ</title>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body class="level-3">
+  <img class="image-gradient" src="images/gradient.png" alt="gradient"/>
+  <div class="layer-blur"></div>
+
+  <div class="container">
+    <header>
+      <a href="index.html"><h1 class="logo">Koenigsegg Jesko</h1></a>
+      <nav>
+        <a href="performance.html">Performance</a>
+        <a href="heritage.html">Heritage</a>
+        <a href="support.html">Support</a>
+      </nav>
+      <a href="learnmore.html" class="btn-learnmore">LEARN MORE</a>
+    </header>
+
+    <main class="faq-main">
+      <!-- Title Section -->
+      <section class="faq-title">
+        <h1>FREQUENTLY</h1>
+        <h3>ASKED</h3>
+        <p class="faq-intro">Everything you need to know about the Jesko</p>
+      </section>
+
+      <!-- FAQ Accordion -->
+      <section class="faq-section">
+        <div class="faq-container">
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>What makes the Jesko different from other Koenigsegg models?</h3>
+              <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+              <p>The Jesko features the most powerful engine Koenigsegg has ever built, producing up to 1,600 horsepower on racing fuel. It also introduces the revolutionary Light Speed Transmission (LST) with 9 speeds and near-instantaneous gear changes.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>How fast can the Jesko go?</h3>
+              <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+              <p>The Jesko is designed to exceed 330 km/h (205 mph). The Jesko Absolut variant, with its low-drag configuration, is theoretically capable of reaching even higher speeds, potentially making it one of the fastest production cars ever built.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>What is the Light Speed Transmission?</h3>
+              <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+              <p>The LST is Koenigsegg's revolutionary 9-speed transmission that can change gears in virtually zero time. Unlike traditional transmissions, it can skip gears and go directly from any gear to any other gear, providing unprecedented performance and efficiency.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>How many Jesko models will be produced?</h3>
+              <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+              <p>Koenigsegg plans to produce 125 units of the Jesko, split between the track-focused standard version and the high-speed Jesko Absolut. Each car is hand-built in Ängelholm, Sweden, ensuring exceptional quality and exclusivity.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>What fuel does the Jesko require?</h3>
+              <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+              <p>The Jesko can run on both E85 ethanol fuel and premium gasoline. On E85, it produces its maximum 1,600 horsepower, while on gasoline it produces 1,280 horsepower. The engine automatically adjusts its performance based on the fuel type.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>What is the price of a Koenigsegg Jesko?</h3>
+              <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+              <p>The Koenigsegg Jesko starts at approximately $3 million USD. The final price can vary based on customization options and regional specifications. Given its limited production and advanced technology, it represents the pinnacle of automotive engineering.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>Can the Jesko be driven on public roads?</h3>
+              <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+              <p>Yes, the Jesko is fully road-legal and designed for both track and street use. It features adjustable suspension, multiple driving modes, and comfort features that make it suitable for daily driving, despite its extreme performance capabilities.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    document.querySelectorAll('.faq-question').forEach(question => {
+      question.addEventListener('click', () => {
+        const faqItem = question.parentElement;
+        const answer = faqItem.querySelector('.faq-answer');
+        const toggle = question.querySelector('.faq-toggle');
+        
+        faqItem.classList.toggle('active');
+        
+        if (faqItem.classList.contains('active')) {
+          answer.style.maxHeight = answer.scrollHeight + 'px';
+          toggle.textContent = '−';
+        } else {
+          answer.style.maxHeight = '0';
+          toggle.textContent = '+';
+        }
+      });
+    });
+  </script>
+</body>
+</html>

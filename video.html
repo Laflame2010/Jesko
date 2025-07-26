@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jesko - Introduction</title>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body class="level-3">
+  <img class="image-gradient" src="images/gradient.png" alt="gradient"/>
+  <div class="layer-blur"></div>
+
+  <div class="container">
+    <header>
+      <a href="index.html"><h1 class="logo">Koenigsegg Jesko</h1></a>
+      <nav>
+        <a href="performance.html">Performance</a>
+        <a href="heritage.html">Heritage</a>
+        <a href="support.html">Support</a>
+      </nav>
+      <a href="learnmore.html" class="btn-learnmore">LEARN MORE</a>
+    </header>
+
+    <main class="video-main">
+      <!-- Title Section -->
+      <section class="video-title">
+        <h1>INTRODUCING</h1>
+        <h3>JESKO</h3>
+        <p class="video-intro">Experience the beast in action</p>
+      </section>
+
+      <!-- Video Section -->
+      <section class="video-section">
+        <div class="video-container">
+          <video 
+            autoplay 
+            loop 
+            muted 
+            playsinline
+            preload="auto"
+            class="premium-video"
+            id="jeskoVideo">
+            <source src="videos/jesko-intro.webm" type="video/webm">
+            <source src="videos/jesko-intro.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <div class="video-overlay">
+            <button class="play-pause-btn" onclick="togglePlayPause()">⏸️</button>
+            <button class="mute-btn" onclick="toggleMute()">🔊</button>
+          </div>
+        </div>
+        <div class="video-description">
+          <h2>Pure Performance Unleashed</h2>
+          <p>Experience the Koenigsegg Jesko in its full glory. From the roar of the 5.0-liter twin-turbo V8 to the precision of Swedish engineering, this is automotive excellence in motion.</p>
+        </div>
+      </section>
+
+      <!-- Back Navigation -->
+      <section class="back-nav">
+        <a href="index.html" class="back-btn">← Back to Home</a>
+        <a href="learnmore.html" class="explore-btn">Explore More →</a>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    function togglePlayPause() {
+      const video = document.querySelector('.premium-video');
+      const btn = document.querySelector('.play-pause-btn');
+      
+      if (video.paused) {
+        video.play();
+        btn.textContent = '⏸️';
+      } else {
+        video.pause();
+        btn.textContent = '▶️';
+      }
+    }
+    
+    function toggleMute() {
+      const video = document.querySelector('.premium-video');
+      const btn = document.querySelector('.mute-btn');
+      
+      if (video.muted) {
+        video.muted = false;
+        btn.textContent = '🔊';
+      } else {
+        video.muted = true;
+        btn.textContent = '🔇';
+      }
+    }
+    
+    // Auto-unmute and play on any user interaction
+    document.addEventListener('DOMContentLoaded', function() {
+      const video = document.getElementById('jeskoVideo');
+      
+      // Unmute and ensure playing on first interaction
+      function enableAudio() {
+        video.muted = false;
+        video.play();
+        document.querySelector('.mute-btn').textContent = '🔊';
+      }
+      
+      // Listen for various user interactions
+      document.addEventListener('click', enableAudio, { once: true });
+      document.addEventListener('touchstart', enableAudio, { once: true });
+      document.addEventListener('keydown', enableAudio, { once: true });
+    });
+  </script>
+</body>
+</html>
